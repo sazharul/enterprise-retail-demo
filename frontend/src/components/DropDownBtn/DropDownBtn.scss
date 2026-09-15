@@ -1,0 +1,149 @@
+@import '../../scss/variables.scss';
+
+
+.dropdown-main {
+    position: relative;
+
+    .dropdown-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 600;
+        height: 44px;
+        width: 242px;
+        padding-left: 20px;
+        padding-right: 18px;
+        background-color: var(--Secondary-Color, $secondary-color);
+        color: var(--Title-text-color, $title-text-color);
+        cursor: pointer;
+
+        .menu-icon {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .menu-title {
+            font-family: Inter;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            letter-spacing: -0.12px;
+        }
+    }
+
+    .dropdown-content {
+        position: absolute;
+        top: 0;
+        // border: 1px solid #000;
+        width: 100%;
+        z-index: 50;
+        cursor: pointer;
+
+        .menu-list {
+            margin-top: 44px;
+            //   border: 1px solid #000;
+            background-color: #fff;
+            color: #000;
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+
+                .menu-item {
+                    position: relative;
+                    padding-left: 20px;
+                    padding-right: 8px;
+                    padding-top: 12px;
+                    padding-bottom: 12px;
+
+                    .menu-item-text {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        font-weight: normal;
+                        font-size: 12px;
+                        cursor: pointer;
+
+                        &.active-menu-item {
+                            color: var(--Primary-Color, $primary-color);
+                        }
+                    }
+
+                    .submenu {
+                        position: absolute;
+                        left: 99%;
+                        top: -4%;
+                        width: 100%;
+                        fill: #fff;
+
+                        filter: drop-shadow(0px 0px 12px rgba(255, 135, 166, 0.2));
+
+                        .submenu-list {
+                            //   border: 1px solid #000;
+                            margin: 2px;
+                            background-color: #fff;
+
+                            .submenu-item {
+                                position: relative;
+                                padding-left: 16px;
+                                padding-right: 8px;
+                                padding-top: 12px;
+                                padding-bottom: 12px;
+
+                                .submenu-item-text {
+                                    width: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    font-weight: normal;
+                                    font-size: 12px;
+                                    cursor: pointer;
+
+                                    &.active-submenu-item {
+                                        color: var(--Primary-Color, $primary-color);
+                                    }
+                                }
+
+                                .subsubmenu {
+                                    position: absolute;
+                                    left: 99.1%;
+                                    top: -4%;
+                                    width: 100%;
+                                    fill: #fff;
+                                    filter: drop-shadow(0px 0px 12px rgba(255, 135, 166, 0.2));
+
+                                    .subsubmenu-list {
+                                        // border: 1px solid #000;
+                                        margin: 2px;
+                                        background-color: #fff;
+
+                                        .subsubmenu-item {
+                                            position: relative;
+                                            padding-left: 16px;
+                                            padding-right: 8px;
+                                            padding-top: 12px;
+                                            padding-bottom: 12px;
+
+                                            .subsubmenu-item-text {
+                                                font-weight: normal;
+                                                font-size: 12px;
+                                                cursor: pointer;
+
+                                                &:hover {
+                                                    color: var(--Primary-Color, $primary-color);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import "../../../scss/variables.scss";
+
+.sidebar-scroll-control::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+}
+
+.sidebar-scroll-control::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+.sidebar-scroll-control::-webkit-scrollbar-thumb {
+    background-color: $scroll-bar-color; /* Thumb color */
+    // border-radius: 4px; 
+}
+
+/* Optional: Hide scrollbar when inactive */
+.sidebar-scroll-control::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+}

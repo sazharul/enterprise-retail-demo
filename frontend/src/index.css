@@ -1,0 +1,16 @@
+@import './scss/customUtilities.scss';
+@import './scss/button.scss';
+/* @import './scss/form.scss'; */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Cute+Font&display=swap'); */
+
+*, *::before, *::after {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

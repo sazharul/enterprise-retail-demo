@@ -1,0 +1,239 @@
+$first-button-color: #d90068;
+$second-button-color: #9747ff;
+$third-button-color: #129ced;
+
+.pc-navbar {
+    // navbar-first-row start
+    .navbar-first-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 10px 6px 10px;
+        //   logo start
+        .logo {
+            max-height: 28px;
+            max-width: 148px;
+            display: flex;
+            align-items: center;
+
+            h5 {
+                color: #000;
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                letter-spacing: -0.16px;
+            }
+        }
+
+        //   logo end
+        //   right side start
+        .right-side {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 20px;
+            //   search form start
+            .search-form {
+                position: relative;
+                width: 50%;
+
+                .input {
+                    border: 1px solid #5dc9f4;
+                    border-radius: 9999px;
+                    height: 36px;
+                    width: 100%;
+                    padding-left: 35px;
+                    color: rgba(0, 0, 0, 0.831);
+                    font-family: Inter;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.12px;
+                }
+
+                .submite-btn {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    color: #00000099;
+                }
+                .close-search {
+                    position: absolute;
+                    top: 5px;
+                    right: 8px !important;
+                    // color: #ffffff;
+                    // background-color: rgb(104, 99, 99);
+                    border-radius: 50%;
+                    padding: 4px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            //   search form end
+            // right side options start
+            .right-side-options {
+                display: flex;
+                align-items: center;
+
+                button {
+                    &:first-child {
+                        display: flex;
+                        margin-right: 20px;
+                        flex-direction: column;
+                        align-items: center;
+                        color: rgba(0, 0, 0, 0.85);
+                        font-family: Inter;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        letter-spacing: -0.1px;
+                    }
+
+                    &:nth-child(2) {
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: 20px;
+                        align-items: center;
+                        color: rgba(0, 0, 0, 0.85);
+                        font-family: Inter;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        letter-spacing: -0.1px;
+                    }
+
+                    &:nth-child(3) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        color: rgba(0, 0, 0, 0.85);
+                        font-family: Inter;
+                        font-size: 10px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        letter-spacing: -0.1px;
+                    }
+                }
+            }
+
+            // right side options end
+        }
+
+        //   right side end
+    }
+
+    //   navbar-first-row end
+
+    //   navbar-second-row start
+    .navbar-second-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        .left-side {
+            display: flex;
+            align-items: center;
+            gap: 1px;
+
+            .btn {
+                display: block;
+                white-space: nowrap;
+                color: rgba(0, 0, 0, 0.65);
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                letter-spacing: 0.14px;
+            }
+        }
+
+        .right-side {
+            display: flex;
+            align-items: center;
+
+            button {
+                white-space: nowrap;
+                padding: 6px 16px;
+                border-radius: 12px;
+                color: #fff;
+                font-family: Inter;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+
+                &:first-child {
+                    margin-right: 20px;
+                    // background-color: var(--First-button-color, $first-button-color);
+                }
+
+                &:nth-child(2) {
+                    margin-right: 20px;
+                    // background-color: var( $second-button-color);
+                }
+
+                &:nth-child(3) {
+                    // background-color: var(--Third-button-color, $third-button-color);
+                }
+            }
+        }
+    }
+
+    //   navbar-second-row end
+
+    @media (max-width: 1279px) {
+        .navbar-second-row {
+            .left-side {
+                .btn {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // floating cart button shake start
+    .add-to-bag-cart-shake {
+        animation-name: cartShakeAnimation;
+        animation-duration: 2000ms;
+        // animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        // animation-direction: alternate;
+    }
+
+    @keyframes cartShakeAnimation {
+        15% {
+            transform: translateY(70px);
+        }
+        30% {
+            transform: translateY(0px);
+        }
+        45% {
+            transform: translateY(60px);
+        }
+        60% {
+            transform: translateY(0px);
+        }
+
+        75% {
+            transform: translateY(50px);
+        }
+        90% {
+            transform: translateY(0px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+    // floating cart button shake end
+}

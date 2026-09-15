@@ -1,0 +1,24 @@
+@import '../../../scss/variables.scss';
+
+.ingredient-card {
+    .card-image {
+        // background-size: cover;
+        // background-position: center;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // height: 132px;
+        // width: 250px;
+        .details {
+            h3 {
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+    }
+}

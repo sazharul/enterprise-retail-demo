@@ -1,0 +1,25 @@
+@import "./variables.scss";
+
+@layer utilities {
+    .bg-primary-color {
+        background-color: $primary-color;
+    }
+}
+
+@layer utilities {
+    .text-primary-color {
+        color: $primary-color;
+    }
+}
+
+@layer utilities {
+    .border-primary-color {
+        border: 1px solid $primary-color;
+    }
+}
+
+@layer utilities {
+    .border-b-primary-color {
+        border-bottom: 2px solid $primary-color;
+    }
+}

@@ -1,0 +1,42 @@
+@import "../../scss/variables.scss";
+
+.delivery-return {
+    display: flex;
+    background: #FFF;
+    box-shadow: 0px 2px 12px 0px rgba(12, 107, 144, 0.12);
+
+    .per-section {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding-top: 33px;
+        padding-bottom: 33px;
+        padding-left: 22px;
+        padding-right: 28px;
+
+        .icon {
+            height: 22px;
+            width: 30px;
+            color: $primary-color;
+        }
+
+        h5 {
+            color: #000;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin-bottom: 8px;
+        }
+
+        p {
+            color: rgba(0, 0, 0, 0.50);
+            font-family: Inter;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 14px; /* 127.273% */
+        }
+    }
+}

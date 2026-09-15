@@ -1,0 +1,22 @@
+// .ant-modal-footer{
+//     padding-bottom: 12px !important;
+//     padding-right: 12px !important;
+//     .ant-btn-primary{
+//         background-color: red !important;
+//     }
+// }
+.ant-upload-select {
+    width: 60px !important;
+    height: 60px !important;
+    border-color: #5dc9f4 !important;
+    background-color: #F8F8F8 !important;
+}
+
+.ant-upload-list {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+.ant-upload-list-item-error {
+    border: 1px solid #F8F8F8 !important;
+}

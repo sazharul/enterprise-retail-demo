@@ -1,0 +1,29 @@
+@import "../scss/variables.scss";
+
+@layer base {
+    [type="text"],
+    input:where(:not([type])),
+    [type="email"],
+    [type="url"],
+    [type="password"],
+    [type="number"],
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="search"],
+    [type="tel"],
+    [type="time"],
+    [type="week"],
+    [multiple],
+    textarea,
+    select {
+        @apply w-full border border-gray-300 rounded-md focus:border-primary-color focus:ring-[$primary-color];
+    }
+
+    [type="checkbox"],
+    [type="radio"],
+    select {
+        @apply border border-gray-300 rounded-md checked:bg-primary-color hover:cursor-pointer text-primary-color focus:border-primary-color focus:ring-[$primary-color];
+    }
+}
+  

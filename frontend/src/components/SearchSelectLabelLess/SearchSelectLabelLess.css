@@ -1,0 +1,18 @@
+
+.css-1okebmr-indicatorSeparator::-webkit-scrollbar {
+    width: 2px; /* Width of the scrollbar */
+}
+
+.css-1okebmr-indicatorSeparator::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+.css-1okebmr-indicatorSeparator::-webkit-scrollbar-thumb {
+    background-color: #888; /* Thumb color */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Optional: Hide scrollbar when inactive */
+.css-1okebmr-indicatorSeparator::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+}

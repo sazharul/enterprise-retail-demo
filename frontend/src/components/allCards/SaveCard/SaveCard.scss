@@ -1,0 +1,44 @@
+@import '../../../scss/variables.scss';
+
+.save-card {
+    .card-image {
+        // background-size: cover;
+        // background-position: center;
+        // height: 250px;
+        // width: 250px;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        .details {
+            h3 {
+                color: $primary-color;
+                text-align: center;
+                font-family: Inter;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .price {
+                color: #000;
+                text-align: center;
+                font-family: Inter;
+                font-size: 42px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: normal;
+            }
+
+            h4 {
+                color: $primary-color;
+                text-align: center;
+                font-family: Inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+    }
+}

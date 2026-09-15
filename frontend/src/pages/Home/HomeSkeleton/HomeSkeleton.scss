@@ -1,0 +1,41 @@
+.banner-skeleton {
+    .ant-skeleton-image {
+        width: 1520px !important;
+        height: 250px !important;
+
+        @media screen and (max-width: 540px) {
+            width: 300px !important;
+            height: 250px !important;
+        }
+
+        @media screen and (min-width: 541px) and (max-width: 640px) {
+            width: 530px !important;
+            height: 250px !important;
+        }
+
+        @media screen and (min-width: 641px) and (max-width: 768px) {
+            width: 630px !important;
+            height: 250px !important;
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            width: 740px !important;
+            height: 250px !important;
+        }
+
+        @media screen and (min-width: 1025px) and (max-width: 1280px) {
+            width: 1000px !important;
+            height: 250px !important;
+        }
+
+        @media screen and (min-width: 1281px) and (max-width: 1536px) {
+            width: 1260px !important;
+            height: 250px !important;
+        }
+
+        @media screen and (min-width: 1537px) {
+            width: 1520px !important;
+            height: 250px !important;
+        }
+    }
+}

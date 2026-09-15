@@ -1,0 +1,22 @@
+@import '../../scss/variables.scss';
+
+.primary-button {
+    border-radius: 4px;
+    background-color: $primary-color;
+    height: 42px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    span {
+        color: #fff;
+        text-align: center;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}

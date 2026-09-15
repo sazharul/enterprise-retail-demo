@@ -1,0 +1,60 @@
+.slick-track {
+    height: auto !important;
+}
+
+.makeStyles-container-1, .makeStyles-iconContainer-3, .makeStyles-container-9, .makeStyles-iconContainer-11, .makeStyles-container-17 {
+    padding: 0px !important;
+}
+
+.makeStyles-copyUrl-14::-webkit-scrollbar {
+    width: 3px; /* Width of the scrollbar */
+    height: 8px;
+}
+
+.makeStyles-copyUrl-14::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+.makeStyles-copyUrl-14::-webkit-scrollbar-thumb {
+    background-color: #0094cf; /* Thumb color */
+    border-radius: 1px; /* Rounded corners */
+}
+
+/* Optional: Hide scrollbar when inactive */
+.makeStyles-copyUrl-14::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+    cursor: pointer;
+}
+
+
+.ant-dropdown-menu {
+    max-height: 200px !important;
+    overflow: hidden !important;
+    overflow-y: auto !important;
+    border-radius: 0px !important;
+}
+
+
+.ant-dropdown-menu::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    height: 3px;
+}
+
+.ant-dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track color */
+}
+
+.ant-dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: #0094cf; /* Thumb color */
+    border-radius: 1px; /* Rounded corners */
+}
+
+/* Optional: Hide scrollbar when inactive */
+.ant-dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+}
+
+.ant-dropdown-menu-for-chatting::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+    height: 3px;
+}

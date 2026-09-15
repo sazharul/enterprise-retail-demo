@@ -1,0 +1,41 @@
+.ProductDetailsSkeleton {
+    .ant-skeleton-image {
+        width: 450px !important;
+        height: 450px !important;
+
+        @media screen and (max-width: 540px) {
+            width: 300px !important;
+            height: 250px !important;
+        }
+
+        @media screen and (min-width: 541px) and (max-width: 640px) {
+            width: 530px !important;
+            height: 250px !important;
+        }
+
+        @media screen and (min-width: 641px) and (max-width: 768px) {
+            width: 630px !important;
+            height: 250px !important;
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            width: 300px !important;
+            height: 300px !important;
+        }
+
+        @media screen and (min-width: 1025px) and (max-width: 1280px) {
+            width: 300px !important;
+            height: 300px !important;
+        }
+
+        @media screen and (min-width: 1281px) and (max-width: 1536px) {
+            width: 420px !important;
+            height: 420px !important;
+        }
+
+        @media screen and (min-width: 1537px) {
+            width: 450px !important;
+            height: 450px !important;
+        }
+    }
+}

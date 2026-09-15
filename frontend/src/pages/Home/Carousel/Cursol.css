@@ -1,0 +1,11 @@
+.swiper-pagination {
+    @apply absolute md:!-bottom-8 !-bottom-8  w-full flex justify-center items-center py-2 bg-transparent md:!gap-[10px] gap-1.5;
+}
+
+.swiper-pagination-bullet {
+    @apply md:w-3 md:h-3 h-[10px] w-[10px] bg-[#58595b] opacity-100 my-1 cursor-pointer rounded-full;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #d43d5e;
+}

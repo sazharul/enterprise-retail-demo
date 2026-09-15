@@ -1,0 +1,105 @@
+@import "../scss/variables.scss";
+
+
+@layer components {
+    // .btn {
+    //   @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+    //   @apply transition-all
+    // }
+    .btn-primary {
+        // @apply relative overflow-hidden bg-primary-color text-white font-bold py-2 px-4  rounded;
+        @apply relative overflow-hidden bg-primary-color rounded px-2 md:px-6 py-[9px] md:py-[10px] text-white text-sm font-semibold leading-normal;
+    }
+
+    .btn-bordered {
+        // @apply relative overflow-hidden bg-primary-color text-white font-bold py-2 px-4  rounded;
+        @apply relative overflow-hidden text-primary-color py-[7px] px-4 border-primary-color rounded-sm text-center text-sm font-semibold leading-6;
+    }
+}
+
+.btn-primary::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    // background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // transform: translate(65px);
+    // transform: rotate(120deg);
+    // transform: scaleX(0);
+    transform: scaleY(0);
+    z-index: -1;
+
+}
+
+.btn-primary:hover {
+    // color: black;
+    z-index: 1;
+    // border-radius: 5px;
+    transition: color 0.5s ease-in-out;
+}
+
+.btn-primary:hover::after {
+    // transform: translate(0);
+    // transform: rotate(0deg);
+    // transform: scaleX(1);
+    transform: scaleY(1);
+    transition: transform 0.5s ease-in-out;
+    // border-radius: 5px;
+}
+
+
+.btn-bordered::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: $primary-color;
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    transform: scaleY(0);
+    z-index: -1;
+
+}
+
+.btn-bordered:hover {
+    color: white;
+    border: 1px solid $primary-color;
+    z-index: 1;
+    transition: color 0.5s ease-in-out;
+}
+
+.btn-bordered:hover::after {
+    transform: scaleY(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.btn-primary {
+    //   animation-name: buttonAnimation;
+    //   animation-duration: 1000ms;
+    // animation-iteration-count: infinite;
+    // animation-fill-mode: forwards;
+    // animation-direction: alternate;
+}
+
+
+@keyframes buttonAnimation {
+    0% {
+        transform: translate(0);
+    }
+    25% {
+        transform: translateY(100px);
+    }
+    50% {
+        transform: translate(0);
+    }
+    75% {
+        transform: translate(-100px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}

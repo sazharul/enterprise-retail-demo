@@ -1,0 +1,23 @@
+.category-card {
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0px 2px 6px 0px rgba(12, 107, 144, 0.06);
+
+    .card-image {
+        // background-image: url("../../assets/category-card/card-background.webp");
+        background-size: cover;
+        background-position: center;
+    }
+
+    p {
+        color: #000;
+        text-align: center;
+        font-family: Inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-top: 16px;
+        padding-bottom: 21px;
+    }
+}
