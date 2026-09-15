@@ -30,7 +30,7 @@ const Main = () => {
             const permission = await Notification.requestPermission();
             if (permission === "granted") {
                 const token = await getToken(messaging, {
-                    vapidKey: "demo-vapid-key-not-used",
+                    vapidKey: import.meta.env.VITE_FIREBASE_VAPID_KEY || "demo-vapid-key-not-used",
                 });
 
                 if (token) {
@@ -80,6 +80,10 @@ const Main = () => {
             <div onClick={handleTrendingClose} className="overflow-hidden">
                 <div onClick={handleNavbarRelatedSearchRefClose}>
                     <div className="fixed z-20 w-full bg-white">
+                        <div className="bg-amber-900/90 text-amber-100 text-center text-xs px-3 py-2">
+                            <strong>Portfolio demo</strong> — Independent showcase for hiring. Not affiliated with any client or live product. Fictional data only.{' '}
+                            <a href="https://azharulislamsohan.com/legal" className="underline hover:text-white" target="_blank" rel="noreferrer">Legal notice</a>
+                        </div>
                         <Navbar/>
                     </div>
                     <div className="pt-[95px] md:pt-[146px]">

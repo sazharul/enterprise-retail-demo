@@ -41,12 +41,12 @@
 
 var firebaseConfig = {
     apiKey: "demo-api-key-not-used",
-  authDomain: "glowcart-demo.firebaseapp.com",
-  projectId: "glowcart-demo",
-  storageBucket: "glowcart-demo.appspot.com",
-  messagingSenderId: "000000000000",
-  appId: "1:000000000000:web:bde19ac9c6baa4580dc27e",
-  measurementId: "G-TDG8YSMS5F"
+    authDomain: "glowcart-demo.firebaseapp.com",
+    projectId: "glowcart-demo",
+    storageBucket: "glowcart-demo.appspot.com",
+    messagingSenderId: "000000000000",
+    appId: "1:000000000000:web:demo000000",
+    measurementId: "G-DEMO000000"
         };
 
     firebase.initializeApp(firebaseConfig);
@@ -112,8 +112,8 @@ var firebaseConfig = {
             projectId: "glowcart-demo",
             storageBucket: "glowcart-demo.appspot.com",
             messagingSenderId: "000000000000",
-            appId: "1:000000000000:web:bde19ac9c6baa4580dc27e",
-            measurementId: "G-TDG8YSMS5F"
+            appId: "1:000000000000:web:demo000000",
+            measurementId: "G-DEMO000000"
         };
 
         firebase.initializeApp(firebaseConfig);
