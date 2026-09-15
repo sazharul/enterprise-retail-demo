@@ -1,14 +1,38 @@
 # Disclaimer
 
-**GlowCart** is a fictional brand created for portfolio and hiring demonstration purposes.
+**Repository:** `enterprise-retail-demo`  
+**Portfolio brand:** GlowCart
 
-This repository contains a **sanitized subset** of an enterprise retail platform architecture. It does **not** include:
+## Purpose
 
-- Production client data, images, or uploads
-- Pricing automation, reward rule engines, or commission logic
-- Live third-party credentials (Pathao, Firebase, payment gateways)
-- The full production codebase
+This repository is published **only for hiring and technical evaluation**. It demonstrates enterprise e-commerce architecture: Laravel write API, React storefront, and Node.js catalog read layer.
 
-The live production site at [perfectobd.com](https://perfectobd.com/) is operated by a separate entity. This demo is maintained by [Md. Azharul Islam (Sohan)](https://azharulislamsohan.com) to showcase technical capability.
+## What this is
 
-Use at your own risk. No warranty is provided.
+- An **independently developed portfolio demonstration** with fictional branding (GlowCart) and synthetic skincare catalog data
+- Shows multi-warehouse inventory, cart/checkout flows, and read/write API split patterns
+
+## What this is NOT
+
+- **Not** the production source code of PerfectoBD or any live retailer
+- **Not** affiliated with, endorsed by, or authorized by any production skincare retailer
+- **Not** a leak of proprietary pricing automation, reward rules, commission logic, or client assets
+- **Not** intended for production retail operations
+
+Production reference: [perfectobd.com](https://perfectobd.com/) (code not published).
+
+## Intellectual property
+
+Demo code © Md. Azharul Islam (Sohan), MIT license in [LICENSE](LICENSE). See [NOTICE](NOTICE).
+
+## No warranty
+
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
+
+## Contact
+
+ahamedsohan592@gmail.com
+
+## Jurisdiction
+
+Published from Bangladesh. This document is practical guidance, not legal advice.

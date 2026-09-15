@@ -1,10 +1,13 @@
 # GlowCart — Enterprise Retail Platform Demo
 
-Open-source portfolio demo of a production skincare e-commerce stack: **Laravel** write API + **React** storefront + **Node.js** catalog read layer.
+Open-source portfolio demo of an enterprise skincare e-commerce stack: **Laravel** write API + **React** storefront + **Node.js** catalog read layer. Rebranded as **GlowCart**.
 
-> **Disclaimer:** This is a sanitized demo for hiring and portfolio review. It is not production code and is not affiliated with any live retailer. See [DISCLAIMER.md](DISCLAIMER.md).
-
-**Production client site:** [perfectobd.com](https://perfectobd.com/)
+> **Portfolio demonstration only.** This repository is an independent showcase for recruiters and engineers.
+> It uses the same technologies and architectural patterns from my production work, but it is **not**
+> the source code of any client, employer, or live product. Fictional branding and synthetic data only.
+> See [DISCLAIMER.md](DISCLAIMER.md).
+>
+> Production experience reference: [perfectobd.com](https://perfectobd.com/) (code not published).
 
 ## Architecture
 
