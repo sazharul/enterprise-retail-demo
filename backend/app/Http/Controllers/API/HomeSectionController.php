@@ -119,7 +119,7 @@ class HomeSectionController extends BaseController
         $section_fourteen = SectionFourteen::with('concerns')->where('status', 1)->get();
         array_push($all_sections, $section_fourteen);
 
-        //new at perfecto
+        // GlowCart demo home sections
         $section_fifteen = Product::with(['productShades.productShadeImages', 'productSizes.productSizeImages', 'reviews'])->where('status', 1)->withCount('reviews')
             ->withAvg('reviews', 'star')
             ->latest()
