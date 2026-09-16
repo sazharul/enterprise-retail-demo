@@ -1,5 +1,18 @@
 @extends('layouts.app')
 
+@php
+    $firebaseEnabled = filled(config('firebase.api_key'));
+    $firebaseConfig = array_filter([
+        'apiKey' => config('firebase.api_key'),
+        'authDomain' => config('firebase.auth_domain'),
+        'projectId' => config('firebase.project_id'),
+        'storageBucket' => config('firebase.storage_bucket'),
+        'messagingSenderId' => config('firebase.messaging_sender_id'),
+        'appId' => config('firebase.app_id'),
+        'measurementId' => config('firebase.measurement_id'),
+    ]);
+@endphp
+
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -16,6 +29,12 @@
                             {{ session('status') }}
                         </div>
                     @endif
+
+                    @unless ($firebaseEnabled)
+                        <div class="alert alert-warning" role="alert">
+                            Push notifications are disabled in demo mode. Configure <code>FIREBASE_*</code> environment variables in production.
+                        </div>
+                    @endunless
 
                     <form action="{{ route('send.notification') }}" method="POST">
                         @csrf
@@ -36,34 +55,21 @@
     </div>
 </div>
 
+@if ($firebaseEnabled)
 <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
 <script>
-
-var firebaseConfig = {
-    apiKey: "demo-api-key-not-used",
-    authDomain: "glowcart-demo.firebaseapp.com",
-    projectId: "glowcart-demo",
-    storageBucket: "glowcart-demo.appspot.com",
-    messagingSenderId: "000000000000",
-    appId: "1:000000000000:web:demo000000",
-    measurementId: "G-DEMO000000"
-        };
+    const firebaseConfig = @json($firebaseConfig);
 
     firebase.initializeApp(firebaseConfig);
     const messaging = firebase.messaging();
-    console.log(firebaseConfig);
+
     function initFirebaseMessagingRegistration() {
-        // console.log('working');
-            messaging
+        messaging
             .requestPermission()
             .then(function () {
-                token = messaging.getToken()
-                console.log(token);
-                return token
+                return messaging.getToken();
             })
             .then(function(token) {
-                console.log(token);
-
                 $.ajaxSetup({
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -73,24 +79,19 @@ var firebaseConfig = {
                 $.ajax({
                     url: '{{ route("save-token") }}',
                     type: 'POST',
-                    data: {
-
-                        token: token
-                    },
+                    data: { token: token },
                     dataType: 'JSON',
-                    success: function (response) {
+                    success: function () {
                         alert('Token saved successfully.');
                     },
                     error: function (err) {
-                        console.log(token);
-                        console.log('User Chat Token Error'+ err);
+                        console.log('User Chat Token Error' + err);
                     },
                 });
-
             }).catch(function (err) {
-                console.log('User Chat Token Error'+ err);
+                console.log('User Chat Token Error' + err);
             });
-     }
+    }
 
     messaging.onMessage(function(payload) {
         const noteTitle = payload.notification.title;
@@ -100,67 +101,12 @@ var firebaseConfig = {
         };
         new Notification(noteTitle, noteOptions);
     });
-
 </script>
+@else
+<script>
+    function initFirebaseMessagingRegistration() {
+        alert('Push notifications are disabled in demo mode.');
+    }
+</script>
+@endif
 @endsection
-{{-- @push('scripts')
-    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase.js"></script>
-    <script>
-        var firebaseConfig = {
-            apiKey: "demo-api-key-not-used",
-            authDomain: "glowcart-demo.firebaseapp.com",
-            projectId: "glowcart-demo",
-            storageBucket: "glowcart-demo.appspot.com",
-            messagingSenderId: "000000000000",
-            appId: "1:000000000000:web:demo000000",
-            measurementId: "G-DEMO000000"
-        };
-
-        firebase.initializeApp(firebaseConfig);
-        const messaging = firebase.messaging();
-
-        function initFirebaseMessagingRegistration() {
-            messaging
-                .requestPermission()
-                .then(function() {
-                    return messaging.getToken()
-                })
-                .then(function(token) {
-                    console.log(token);
-
-                    $.ajaxSetup({
-                        headers: {
-                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                        }
-                    });
-
-                    $.ajax({
-                        url: '{{ route('store.token') }}',
-                        type: 'POST',
-                        data: {
-                            token: token
-                        },
-                        dataType: 'JSON',
-                        success: function(response) {
-                            alert('Token saved successfully.');
-                        },
-                        error: function(err) {
-                            console.log('User Chat Token Error' + err);
-                        },
-                    });
-
-                }).catch(function(err) {
-                    console.log('User Chat Token Error' + err);
-                });
-        }
-
-        messaging.onMessage(function(payload) {
-            const noteTitle = payload.notification.title;
-            const noteOptions = {
-                body: payload.notification.body,
-                icon: payload.notification.icon,
-            };
-            new Notification(noteTitle, noteOptions);
-        });
-    </script>
-@endpush --}}

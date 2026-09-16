@@ -1,19 +1,13 @@
-// Demo placeholder — push notifications disabled in portfolio demo mode.
-importScripts('https://www.gstatic.com/firebasejs/8.3.2/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/8.3.2/firebase-messaging.js');
-
-firebase.initializeApp({
-    apiKey: 'demo-api-key-not-used',
-    authDomain: 'glowcart-demo.firebaseapp.com',
-    projectId: 'glowcart-demo',
-    storageBucket: 'glowcart-demo.appspot.com',
-    messagingSenderId: '000000000000',
-    appId: '1:000000000000:web:demo000000',
-    measurementId: 'G-DEMO000000',
-});
-
-const messaging = firebase.messaging();
-messaging.setBackgroundMessageHandler(function (payload) {
-    console.log('Demo mode: background message ignored.', payload);
-    return Promise.resolve();
+// Firebase push notifications disabled in GlowCart demo.
+// Set FIREBASE_* env vars and generate a production service worker in deployment.
+self.addEventListener("push", (event) => {
+  if (!event.data) return;
+  const payload = event.data.json();
+  const title = payload.notification?.title || "GlowCart";
+  event.waitUntil(
+    self.registration.showNotification(title, {
+      body: payload.notification?.body || "",
+      tag: "glowcart-notification",
+    })
+  );
 });
